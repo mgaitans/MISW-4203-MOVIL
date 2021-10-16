@@ -1,2 +1,2 @@
-# -MISW-4203-MOVIL
+# Equipo 24
 Ingeniería de software para aplicaciones móviles

@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Vinilos</string>
+    <string name="roll_label">Albumes</string>
+    <string name="action_switch_layout">Albumes</string>
+    <string name="action_inicio">Inicio</string>
+    <string name="default_text">Vinilos</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_albums">Albums</string>
+    <string name="performer_title"><b>Interpretes</b></string>
+    <string name="track_title"><b>Canciones</b></string>
+    <string name="comment_title"><b>Comentarios</b></string>
 </resources>

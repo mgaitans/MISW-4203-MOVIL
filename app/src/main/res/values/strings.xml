@@ -7,7 +7,13 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_albums">Albums</string>
+    <string name="title_collector">Coleccionistas</string>
     <string name="performer_title"><b>Interpretes</b></string>
     <string name="track_title"><b>Canciones</b></string>
     <string name="comment_title"><b>Comentarios</b></string>
+
+    <string name="nav_header_title">Bienvenido</string>
+    <string name="nav_header_subtitle">Usuario android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_coleccionista"><b>Coleccionista</b></string>
 </resources>

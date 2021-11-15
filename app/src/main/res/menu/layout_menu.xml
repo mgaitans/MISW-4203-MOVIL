@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item android:id="@+id/action_switch_layout"
-        android:title="@string/action_switch_layout"
-        app:showAsAction="always" />
-    <item android:id="@+id/action_inicio"
-        android:title="@string/action_inicio"
-        app:showAsAction="always" />
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group>
+
+        <item
+            android:id="@+id/action_inicio"
+            android:icon="@drawable/ic_menu_album"
+            android:title="@string/action_inicio"
+            android:visible="true" />
+
+        <item android:id="@+id/action_album"
+            android:icon="@drawable/ic_menu_home"
+            android:title="@string/action_switch_layout"/>
+
+        <item android:id="@+id/action_coleccionista"
+            android:icon="@drawable/ic_coleccionista"
+            android:title="@string/action_coleccionista"/>
+
+
+
+    </group>
 </menu>

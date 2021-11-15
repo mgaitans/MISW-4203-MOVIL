@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.AlbumActivity">
+    tools:context=".ui.CollectorActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/my_toolbar"
@@ -31,14 +31,12 @@
             </FrameLayout>
 
             <Button
-                android:id="@+id/new_album"
+                android:id="@+id/new_collector"
                 android:layout_width="105dp"
                 android:layout_height="match_parent"
                 android:text="Nuevo" />
         </TableRow>
-
-
-        </androidx.appcompat.widget.Toolbar>
+    </androidx.appcompat.widget.Toolbar>
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/nav_host_fragment"
@@ -49,6 +47,6 @@
         app:defaultNavHost="true"
         app:layout_constraintTop_toBottomOf="@+id/my_toolbar"
         app:navGraph="@navigation/nav_graph"
-        tools:layout_editor_absoluteX="0dp"/>
+        tools:layout_editor_absoluteX="0dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

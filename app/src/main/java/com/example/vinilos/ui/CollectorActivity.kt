@@ -10,14 +10,14 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.vinilos.R
-import com.example.vinilos.databinding.ActivityAlbumBinding
+import com.example.vinilos.databinding.ActivityCollectorBinding
 
-class AlbumActivity : AppCompatActivity() {
+class CollectorActivity : AppCompatActivity() {
     private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding = ActivityAlbumBinding.inflate(layoutInflater)
+        val binding = ActivityCollectorBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         // Get the navigation host fragment from this Activity
@@ -46,9 +46,9 @@ class AlbumActivity : AppCompatActivity() {
                 startActivity(intent)
                 return true
             }
-            R.id.action_coleccionista -> {
+            R.id.action_album -> {
                 // Create an intent with a destination of the other Activity
-                val intent = Intent(this, CollectorActivity::class.java)
+                val intent = Intent(this, AlbumActivity::class.java)
                 startActivity(intent)
                 return true
             }

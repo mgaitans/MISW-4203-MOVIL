@@ -6,16 +6,17 @@
         <item
             android:id="@+id/action_inicio"
             android:icon="@drawable/ic_menu_album"
-            android:title="@string/action_inicio"
-            android:visible="true" />
+            android:title="@string/action_inicio"/>
 
-        <item android:id="@+id/action_album"
+        <item
+            android:id="@+id/action_album"
             android:icon="@drawable/ic_menu_home"
-            android:title="@string/action_switch_layout"/>
+            android:title="@string/action_switch_layout" />
 
-        <item android:id="@+id/action_coleccionista"
+        <item
+            android:id="@+id/action_coleccionista"
             android:icon="@drawable/ic_coleccionista"
-            android:title="@string/action_coleccionista"/>
+            android:title="@string/action_coleccionista" />
 
     </group>
 </menu>

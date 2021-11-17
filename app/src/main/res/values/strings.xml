@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Vinilos</string>
     <string name="roll_label">Albumes</string>
-    <string name="action_switch_layout">Albumes</string>
-    <string name="action_inicio">Inicio</string>
+    <string name="action_switch_layout"><b>Albumes</b></string>
+    <string name="action_inicio"><b>Inicio</b></string>
     <string name="default_text">Vinilos</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -16,4 +16,5 @@
     <string name="nav_header_subtitle">Usuario android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_coleccionista"><b>Coleccionista</b></string>
+    <string name="des_inicio">Pese al auge de las plataformas digitales de música como iTunes o Spotify, existe un creciente grupo de personas que prefieren escuchar música en formatos tradicionales como los discos en vinilo. <br> Se podra consultar la información de los músicos, las canciones y, para los artistas, los premios que el artista ha recibido (si es que tiene alguno)</br></string>
 </resources>

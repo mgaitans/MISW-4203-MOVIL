@@ -23,9 +23,4 @@
             android:name="albumId"
             app:argType="integer" />
     </fragment>
-    <fragment
-        android:id="@+id/collectorListFragment"
-        android:name="com.example.vinilos.ui.CollectorListFragment"
-        android:label="fragment_collector_list"
-        tools:layout="@layout/fragment_collector_list" />
 </navigation>

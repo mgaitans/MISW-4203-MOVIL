@@ -39,14 +39,14 @@
     </androidx.appcompat.widget.Toolbar>
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/nav_host_fragment"
+        android:id="@+id/nav_host_fragment_collector"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="64dp"
         app:defaultNavHost="true"
         app:layout_constraintTop_toBottomOf="@+id/my_toolbar"
-        app:navGraph="@navigation/nav_graph"
+        app:navGraph="@navigation/nav_graph_collector"
         tools:layout_editor_absoluteX="0dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

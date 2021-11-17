@@ -27,59 +27,66 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center">
 
-                <TableLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_gravity="center|top">
+                    android:orientation="vertical">
 
-                    <TableRow
+                    <TableLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center|top">
 
-                        <TextView
-                            android:id="@+id/textNameCollector"
+                        <TableRow
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:text="@{collector.name}"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-                    </TableRow>
+                            android:layout_height="match_parent">
 
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                            <TextView
+                                android:id="@+id/textNameCollector"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@{collector.name}"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+                        </TableRow>
 
-                        <TextView
-                            android:id="@+id/textTelCollector"
+                        <TableRow
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@{collector.telephone}" />
-                    </TableRow>
+                            android:layout_height="match_parent">
 
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                            <TextView
+                                android:id="@+id/textTelCollector"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@{collector.telephone}" />
+                        </TableRow>
 
-                        <TextView
-                            android:id="@+id/textEmailCollector"
+                        <TableRow
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@{collector.email}" />
-                    </TableRow>
+                            android:layout_height="match_parent">
 
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                            <TextView
+                                android:id="@+id/textEmailCollector"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@{collector.email}" />
+                        </TableRow>
 
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
 
-                        <androidx.constraintlayout.widget.Guideline
-                            android:id="@+id/guideline2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal" />
-                    </TableRow>
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="2dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/design_default_color_primary" />
+                        </TableRow>
 
-                </TableLayout>
+                    </TableLayout>
+                </LinearLayout>
+
 
             </FrameLayout>
 

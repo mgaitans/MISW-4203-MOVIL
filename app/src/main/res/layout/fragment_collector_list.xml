@@ -3,15 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.MainActivity">
+    tools:context=".ui.CollectorListFragment"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view"
+        android:id="@+id/fragments_collector"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:clipToPadding="false"
-        android:padding="16dp" />
-
-
+        tools:listitem="@layout/collector_item" />
 </FrameLayout>

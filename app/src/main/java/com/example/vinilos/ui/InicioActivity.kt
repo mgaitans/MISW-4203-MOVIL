@@ -15,15 +15,21 @@ class InicioActivity : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.layout_menu, menu)
-        supportActionBar!!.title = "Volley"
+        supportActionBar!!.title = "Vinilos"
         return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            R.id.action_switch_layout -> {
+            R.id.action_album -> {
                 // Create an intent with a destination of the other Activity
                 val intent = Intent(this, AlbumActivity::class.java)
+                startActivity(intent)
+                return true
+            }
+            R.id.action_coleccionista -> {
+                // Create an intent with a destination of the other Activity
+                val intent = Intent(this, CollectorActivity::class.java)
                 startActivity(intent)
                 return true
             }

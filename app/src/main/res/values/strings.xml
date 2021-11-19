@@ -11,6 +11,8 @@
     <string name="performer_title"><b>Interpretes</b></string>
     <string name="track_title"><b>Canciones</b></string>
     <string name="comment_title"><b>Comentarios</b></string>
+    <string name="collector_indications">Seleccione el álbum que desea agregar</string>
+    <string name="add_album_collector_btn">Album</string>
 
     <string name="nav_header_title">Bienvenido</string>
     <string name="nav_header_subtitle">Usuario android.studio@android.com</string>

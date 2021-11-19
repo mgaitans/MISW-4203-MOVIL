@@ -3,26 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/MAESTRIA/GIT/MISW-4203-MOVIL/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.22135416666666666" />
-        <entry key="..\:/MAESTRIA/GIT/MISW-4203-MOVIL/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.22135416666666666" />
-        <entry key="..\:/MAESTRIA/GIT/MISW-4203-MOVIL/app/src/main/res/drawable/ic_coleccionista.xml" value="0.22135416666666666" />
-        <entry key="..\:/MAESTRIA/GIT/MISW-4203-MOVIL/app/src/main/res/drawable/ic_launcher_background.xml" value="0.22135416666666666" />
-        <entry key="..\:/MAESTRIA/GIT/MISW-4203-MOVIL/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.22135416666666666" />
-        <entry key="..\:/MAESTRIA/GIT/MISW-4203-MOVIL/app/src/main/res/drawable/ic_menu_album.xml" value="0.22135416666666666" />
-        <entry key="..\:/MAESTRIA/GIT/MISW-4203-MOVIL/app/src/main/res/drawable/ic_menu_home.xml" value="0.22135416666666666" />
-        <entry key="..\:/MAESTRIA/GIT/MISW-4203-MOVIL/app/src/main/res/layout/activity_album.xml" value="0.15760869565217392" />
-        <entry key="..\:/MAESTRIA/GIT/MISW-4203-MOVIL/app/src/main/res/layout/activity_collector.xml" value="0.20520833333333333" />
-        <entry key="..\:/MAESTRIA/GIT/MISW-4203-MOVIL/app/src/main/res/layout/activity_inicio.xml" value="0.36666666666666664" />
-        <entry key="..\:/MAESTRIA/GIT/MISW-4203-MOVIL/app/src/main/res/layout/activity_main.xml" value="0.20520833333333333" />
-        <entry key="..\:/MAESTRIA/GIT/MISW-4203-MOVIL/app/src/main/res/layout/album_item.xml" value="0.20520833333333333" />
-        <entry key="..\:/MAESTRIA/GIT/MISW-4203-MOVIL/app/src/main/res/layout/collector_item.xml" value="0.1" />
-        <entry key="..\:/MAESTRIA/GIT/MISW-4203-MOVIL/app/src/main/res/layout/content_menu_slide.xml" value="0.20520833333333333" />
-        <entry key="..\:/MAESTRIA/GIT/MISW-4203-MOVIL/app/src/main/res/layout/fragment_album_list.xml" value="0.17831813576494426" />
-        <entry key="..\:/MAESTRIA/GIT/MISW-4203-MOVIL/app/src/main/res/layout/fragment_collector_list.xml" value="0.20520833333333333" />
-        <entry key="..\:/MAESTRIA/GIT/MISW-4203-MOVIL/app/src/main/res/layout/nav_header_menu_slide.xml" value="0.20520833333333333" />
-        <entry key="..\:/MAESTRIA/GIT/MISW-4203-MOVIL/app/src/main/res/menu/layout_menu.xml" value="0.20520833333333333" />
-        <entry key="..\:/MAESTRIA/GIT/MISW-4203-MOVIL/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.22135416666666666" />
-        <entry key="..\:/MAESTRIA/GIT/MISW-4203-MOVIL/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.22135416666666666" />
         <entry key="..\:/Users/pinto/Documents/MISO/4/Moviles/Vinilos/app/src/main/res/layout/activity_album.xml" value="0.2957427536231884" />
         <entry key="..\:/Users/pinto/Documents/MISO/4/Moviles/Vinilos/app/src/main/res/layout/activity_inicio.xml" value="0.2957427536231884" />
         <entry key="..\:/Users/pinto/Documents/MISO/4/Moviles/Vinilos/app/src/main/res/layout/activity_main.xml" value="0.2957427536231884" />
@@ -33,6 +13,13 @@
         <entry key="..\:/Users/pinto/Documents/MISO/4/Moviles/Vinilos/app/src/main/res/layout/fragment_album_detail.xml" value="0.2957427536231884" />
         <entry key="..\:/Users/pinto/Documents/MISO/4/Moviles/Vinilos/app/src/main/res/layout/fragment_album_list.xml" value="0.2957427536231884" />
         <entry key="..\:/Users/pinto/Documents/MISO/4/Moviles/Vinilos/app/src/main/res/menu/layout_menu.xml" value="0.36666666666666664" />
+        <entry key="app/src/main/res/layout/activity_album.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_album_create.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_collector.xml" value="0.19270833333333334" />
+        <entry key="app/src/main/res/layout/fragment_album_create.xml" value="0.19270833333333334" />
+        <entry key="app/src/main/res/layout/fragment_album_detail.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_album_list.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_collector_list.xml" value="0.1" />
       </map>
     </option>
   </component>

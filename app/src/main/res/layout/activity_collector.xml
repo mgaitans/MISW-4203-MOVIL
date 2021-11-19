@@ -29,12 +29,6 @@
                 android:layout_gravity="right|top">
 
             </FrameLayout>
-
-            <Button
-                android:id="@+id/new_collector"
-                android:layout_width="105dp"
-                android:layout_height="match_parent"
-                android:text="Nuevo" />
         </TableRow>
     </androidx.appcompat.widget.Toolbar>
 

@@ -62,6 +62,13 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@{album.releaseDate}" />
+
+                                <CheckBox
+                                    android:id="@+id/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+
+
                         </LinearLayout>
                     </LinearLayout>
                 </TableRow>

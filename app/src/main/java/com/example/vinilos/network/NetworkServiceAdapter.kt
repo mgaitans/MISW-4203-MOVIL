@@ -1,6 +1,7 @@
 package com.example.vinilos.network
 
 import android.content.Context
+import android.util.Log
 import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.Response
@@ -91,15 +92,19 @@ class NetworkServiceAdapter constructor(context: Context) {
     }
 
     fun postCollectorAlbum(body: JSONObject, collectorId: Int, albumId: Int, onComplete:(resp:JSONObject)->Unit , onError: (error:VolleyError)->Unit){
+
         requestQueue.add(postRequest("collectors/$collectorId/albums/$albumId",
             body,
             Response.Listener<JSONObject> { response ->
                 onComplete(response)
             },
             Response.ErrorListener {
+
                 onError(it)
             }))
     }
+
+
 
     private fun getRequest(path:String, responseListener: Response.Listener<String>, errorListener: Response.ErrorListener): StringRequest {
         return StringRequest(Request.Method.GET, BASE_URL+path, responseListener,errorListener)

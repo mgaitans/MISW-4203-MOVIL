@@ -12,3 +12,16 @@ Instrucciones para Correr Aplicación:
 6. Esperar hasta que se generen los archivos necesarios.
 7. El emulador de Android se abrirá con la app para que pueda ser utilizada.
 
+
+Pruebas
+Automatizadas Espresso
+Sprint 1
+Ejecutar los siguientes pasos para realizar el tess de pruebas E2E en Espresso:
+
+En la raiz del proyecto desde android studio ir a la siguiente ruta 'app/src/androidTest/java/com/example/vinilos'
+Hacer click derecho sobre el paquete 'UI'
+Click en Run "Tests in...
+** Recomendaciones: Si va ejecutar las pruebas en un eentorno virtual realizarlas en un emulador PIXEL 2 con API 30
+
+
+

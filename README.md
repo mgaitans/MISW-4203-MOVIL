@@ -16,6 +16,7 @@ Instrucciones para Correr Aplicación:
 **Pruebas Automatizadas Espresso**
 
 Sprint 2
+
 Ejecutar los siguientes pasos para realizar el tess de pruebas E2E en Espresso:
 
 En la raiz del proyecto desde android studio ir a la siguiente ruta 'app/src/androidTest/java/com/example/vinilos'

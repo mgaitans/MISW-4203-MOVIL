@@ -14,15 +14,14 @@ Instrucciones para Correr Aplicación:
 
 
 ## Pruebas Automatizadas Espresso
-
-**Sprint 2**
-
+Las pruebas Automatizadas en Espresso de la aplicación se encuentran en el folder que se puede observar en la siguiente imagen: <br />
+![](https://github.com/mgaitans/MISW-4203-MOVIL/blob/main/recursos/Pruebase2e.png)  
+ 
 Ejecutar los siguientes pasos para realizar el tess de pruebas E2E en Espresso:
 
-En la raiz del proyecto desde android studio ir a la siguiente ruta 'app/src/androidTest/java/com/example/vinilos'
-Hacer click derecho sobre el paquete 'UI'
+Hacer click derecho sobre el paquete **UI**
 Click en Run "Tests in...
-** Recomendaciones: Si va ejecutar las pruebas en un eentorno virtual realizarlas en un emulador PIXEL 2 con API 30
+**Recomendaciones:** Si va ejecutar las pruebas en un eentorno virtual realizarlas en un emulador PIXEL 2 con API 30
 
 
 

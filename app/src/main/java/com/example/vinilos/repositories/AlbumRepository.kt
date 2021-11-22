@@ -9,9 +9,12 @@ import com.example.vinilos.models.Album
 import com.example.vinilos.models.Collector
 import com.example.vinilos.network.CacheManager
 import com.example.vinilos.network.NetworkServiceAdapter
+
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
+
+import org.json.JSONObject
 
 class AlbumRepository (val application: Application){
     suspend fun refreshData(): List<Album>{
@@ -73,5 +76,13 @@ class AlbumRepository (val application: Application){
                 apply()
             })
         }
+    }
+    fun createAlbum(body: JSONObject, callback: (JSONObject)->Unit, onError: (VolleyError)->Unit) {
+        NetworkServiceAdapter.getInstance(application).postCreateAlbum(body,{
+
+            callback(it)
+        },
+            onError
+        )
     }
 }

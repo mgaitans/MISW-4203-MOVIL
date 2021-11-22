@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.layout_menu, menu)
-        supportActionBar!!.title = "Volley"
+        supportActionBar!!.title = "Vinilos"
         return true
     }
 

@@ -7,6 +7,9 @@ import com.example.vinilos.models.Album
 import com.example.vinilos.models.AlbumDetail
 import com.example.vinilos.repositories.AlbumDetailRepository
 import com.example.vinilos.repositories.CollectorRepository
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import org.json.JSONObject
 
 class CollectorAlbumViewModel (application: Application, collectorId: Int, albumId: ArrayList<Album>, price: String, status:String) :  AndroidViewModel(application){
@@ -43,19 +46,20 @@ class CollectorAlbumViewModel (application: Application, collectorId: Int, album
 
     private fun postDataFromNetwork() {
         for(i in 0 until idAlbum.size){
-            collectorAlbumRepository.addAlbum(
-
-                idCollector,idAlbum[i].albumId,postBody,{
-                    _collectorAlbum.postValue(it)
-                    _eventNetworkError.value = false
-                    _isNetworkErrorShown.value = false
-                },{
-
-                    _eventNetworkError.value = true
+            try {
+                viewModelScope.launch (Dispatchers.Default){
+                    withContext(Dispatchers.IO){
+                        var data =collectorAlbumRepository.addAlbum(idCollector,idAlbum[i].albumId,postBody)
+                        _collectorAlbum.postValue(data)
+                    }
+                    _eventNetworkError.postValue(false)
+                    _isNetworkErrorShown.postValue(false)
                 }
+            }
+            catch (e:Exception){
+                _eventNetworkError.value = true
+            }
 
-
-            )
         }
 
     }

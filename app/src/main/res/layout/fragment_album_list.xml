@@ -7,6 +7,9 @@
     tools:context=".ui.AlbumListFragment"
     android:layout_marginStart="16dp"
     android:layout_marginEnd="16dp">
+
+
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
@@ -36,6 +39,7 @@
                 android:text="Nuevo" />
         </TableRow>
     </androidx.appcompat.widget.Toolbar>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/fragments_rv"
         android:layout_width="match_parent"

@@ -1,24 +1,23 @@
 package com.example.vinilos.viewmodels
 
 import android.app.Application
-import android.util.Log
 import androidx.lifecycle.*
-import com.example.vinilos.models.AlbumDetail
-import com.example.vinilos.models.CollectorDetail
-import com.example.vinilos.repositories.AlbumDetailRepository
+import com.example.vinilos.models.Album
+import com.example.vinilos.models.CollectorAlbums
+import com.example.vinilos.repositories.AlbumRepository
 import com.example.vinilos.repositories.CollectorRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class CollectorDetailViewModel (application: Application, collectorId: Int) :  AndroidViewModel(application){
+class CollectorAlbumsViewModel (application: Application, collectorId: Int) :  AndroidViewModel(application){
 
-    private val collectorDetailRepository = CollectorRepository(application)
+    private val collectorRepository = CollectorRepository(application)
 
-    private val _collectorDetail = MutableLiveData<CollectorDetail>()
+    private val _albums = MutableLiveData<List<CollectorAlbums>>()
 
-    val collectorDetail: LiveData<CollectorDetail>
-        get() = _collectorDetail
+    val albums: LiveData<List<CollectorAlbums>>
+        get() = _albums
 
     private var _eventNetworkError = MutableLiveData<Boolean>(false)
 
@@ -31,27 +30,24 @@ class CollectorDetailViewModel (application: Application, collectorId: Int) :  A
         get() = _isNetworkErrorShown
 
     val id:Int = collectorId
-
     init {
-        refreshDataFromNetwork()
+        refreshCollectorAlbumsFromNetwork()
     }
 
-    private fun refreshDataFromNetwork() {
-
+    private fun refreshCollectorAlbumsFromNetwork() {
         try {
-            viewModelScope.launch (Dispatchers.Default){
-                withContext(Dispatchers.IO){
-                    var data =collectorDetailRepository.getCollector(id)
-                    _collectorDetail.postValue(data)
+        viewModelScope.launch (Dispatchers.Default){
+            withContext(Dispatchers.IO){
+                var data = collectorRepository.getAlbums(id)
+                _albums.postValue(data)
                 }
-                _eventNetworkError.postValue(false)
-                _isNetworkErrorShown.postValue(false)
+            _eventNetworkError.postValue(false)
+            _isNetworkErrorShown.postValue(false)
             }
         }
         catch (e:Exception){
             _eventNetworkError.value = true
         }
-
 
     }
 
@@ -61,9 +57,9 @@ class CollectorDetailViewModel (application: Application, collectorId: Int) :  A
 
     class Factory(val app: Application, val collectorId: Int) : ViewModelProvider.Factory {
         override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-            if (modelClass.isAssignableFrom(CollectorDetailViewModel::class.java)) {
+            if (modelClass.isAssignableFrom(CollectorAlbumsViewModel::class.java)) {
                 @Suppress("UNCHECKED_CAST")
-                return CollectorDetailViewModel(app, collectorId) as T
+                return CollectorAlbumsViewModel(app,collectorId) as T
             }
             throw IllegalArgumentException("Unable to construct viewmodel")
         }

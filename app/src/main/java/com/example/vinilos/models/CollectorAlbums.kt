@@ -1,9 +1,12 @@
 package com.example.vinilos.models
+import kotlinx.serialization.Serializable
 
+
+@Serializable
 data class CollectorAlbums (
     val id:Int,
-    val price:String,
+    val price:Double,
     val status:String,
-    val album:List<Album>,
-    val collector: List<Collector>
+    val album : Album,
+    val collector : Collector,
 )

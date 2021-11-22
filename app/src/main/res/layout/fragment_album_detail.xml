@@ -4,9 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-        <variable name="album" type="com.example.vinilos.models.AlbumDetail"/>
-    </data>
+
     <ScrollView android:layout_width="match_parent"
         android:layout_height="match_parent"
 
@@ -48,27 +46,27 @@
                     android:id="@+id/album_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="hOLI" />
+                    />
                 <TextView
                     android:id="@+id/album_release"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="BOLI" />
+                    />
                 <TextView
                     android:id="@+id/album_description"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="BOLI" />
+                    />
                 <TextView
                     android:id="@+id/album_genre"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="BOLI" />
+                    />
                 <TextView
                     android:id="@+id/album_record"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="BOLI" />
+                    />
 
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>

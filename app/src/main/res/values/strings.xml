@@ -11,6 +11,13 @@
     <string name="performer_title"><b>Interpretes</b></string>
     <string name="track_title"><b>Canciones</b></string>
     <string name="comment_title"><b>Comentarios</b></string>
+
+
+    <string name="collector_albums_title"><b>Albums</b></string>
+    <string name="collector_perfomers_title"><b>Performers</b></string>
+    <string name="collector_comments_title"><b>Comentarios</b></string>
+
+
     <string name="collector_indications">Seleccione el álbum que desea agregar</string>
     <string name="add_album_collector_btn">Album</string>
     <string name="price_album">Precio</string>

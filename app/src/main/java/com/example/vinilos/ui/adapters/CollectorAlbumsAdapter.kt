@@ -1,10 +1,7 @@
 package com.example.vinilos.ui.adapters
 
-import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.CheckBox
 import androidx.annotation.LayoutRes
 import androidx.core.net.toUri
 import androidx.databinding.DataBindingUtil
@@ -14,22 +11,26 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
 import com.example.vinilos.R
-import com.example.vinilos.databinding.AlbumItemBinding
+import com.example.vinilos.databinding.AlbumPerformerBinding
+import com.example.vinilos.databinding.CollectorAlbumBinding
 import com.example.vinilos.databinding.CollectorAlbumItemBinding
 import com.example.vinilos.models.Album
+import com.example.vinilos.models.CollectorAlbums
+import com.example.vinilos.models.Performer
 import com.example.vinilos.ui.AlbumListFragmentDirections
 import com.squareup.picasso.Picasso
 
-class CollectorAlbumAdapter  : RecyclerView.Adapter<CollectorAlbumAdapter.CollectorAlbumViewHolder>(){
-    val checkedAlbums = ArrayList<Album>()
-    var albums :List<Album> = emptyList()
+class CollectorAlbumsAdapter : RecyclerView.Adapter<CollectorAlbumsAdapter.CollectorAlbumViewHolder>(){
+
+    var albums :List<CollectorAlbums> = emptyList()
         set(value) {
             field = value
             notifyDataSetChanged()
         }
 
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CollectorAlbumViewHolder {
-        val withDataBinding: CollectorAlbumItemBinding = DataBindingUtil.inflate(
+        val withDataBinding: CollectorAlbumBinding = DataBindingUtil.inflate(
             LayoutInflater.from(parent.context),
             CollectorAlbumViewHolder.LAYOUT,
             parent,
@@ -42,18 +43,10 @@ class CollectorAlbumAdapter  : RecyclerView.Adapter<CollectorAlbumAdapter.Collec
             it.album = albums[position]
 
             //Picasso.get()
-                //.load(it.album?.cover)
+                //.load(it.album?.album?.cover)
                 //.into(it.diceImage)
         }
-        holder.bind(albums[position])
-        holder.viewDataBinding.radiobutton.setOnClickListener {
-            val item = it.findViewById<CheckBox>(R.id.radiobutton)
-            if(item.isChecked){
-                checkedAlbums.add(albums[position])
-            }else if(!item.isChecked){
-                checkedAlbums.remove(albums[position])
-            }
-        }
+        holder.bind(albums[position].album)
     }
 
     override fun getItemCount(): Int {
@@ -61,11 +54,11 @@ class CollectorAlbumAdapter  : RecyclerView.Adapter<CollectorAlbumAdapter.Collec
     }
 
 
-    class CollectorAlbumViewHolder(val viewDataBinding: CollectorAlbumItemBinding) :
+    class CollectorAlbumViewHolder(val viewDataBinding: CollectorAlbumBinding) :
         RecyclerView.ViewHolder(viewDataBinding.root) {
         companion object {
             @LayoutRes
-            val LAYOUT = R.layout.collector_album_item
+            val LAYOUT = R.layout.collector_album
         }
         fun bind(album: Album) {
             Glide.with(itemView)

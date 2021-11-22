@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-        <variable name="album" type="com.example.vinilos.models.Album"/>
+        <variable name="album" type="com.example.vinilos.models.CollectorAlbums"/>
     </data>
 
 
@@ -39,28 +39,25 @@
                                 android:id="@+id/textView6"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@{album.name}" />
+                                android:text="@{album.album.name}" />
 
                             <TextView
                                 android:id="@+id/textView5"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@{album.genre}" />
+                                android:text="@{album.album.genre}" />
 
                             <TextView
                                 android:id="@+id/textView7"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@{album.releaseDate}" />
+                                android:text="@{album.album.releaseDate}" />
 
-                                <CheckBox
-                                    android:id="@+id/radiobutton"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"/>
 
 
                         </LinearLayout>
                     </LinearLayout>
+
 
         </com.google.android.material.card.MaterialCardView>
 

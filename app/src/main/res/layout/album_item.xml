@@ -7,9 +7,6 @@
         <variable name="album" type="com.example.vinilos.models.Album"/>
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
@@ -20,15 +17,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:strokeWidth="1dp">
 
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
 
-
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -64,10 +53,8 @@
                                 android:text="@{album.releaseDate}" />
                         </LinearLayout>
                     </LinearLayout>
-                </TableRow>
 
-            </TableLayout>
 
         </com.google.android.material.card.MaterialCardView>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </layout>

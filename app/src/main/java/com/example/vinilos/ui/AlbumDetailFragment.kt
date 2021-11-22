@@ -9,11 +9,15 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.net.toUri
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
+import com.bumptech.glide.request.RequestOptions
 import com.example.vinilos.R
 import com.example.vinilos.databinding.FragmentAlbumDetailBinding
 import com.example.vinilos.models.Album
@@ -85,8 +89,17 @@ class AlbumDetailFragment : Fragment() {
                 view.findViewById<TextView>(R.id.album_description).setText(this.description)
                 view.findViewById<TextView>(R.id.album_genre).setText(this.genre)
                 view.findViewById<TextView>(R.id.album_record).setText(this.recordLabel)
-                Picasso.get()
-                    .load(this.cover)
+                //Picasso.get()
+                    //.load(this.cover)
+                    //.into(view.findViewById<ImageView>(R.id.album_image))
+
+                Glide.with(view)
+                    .load(this.cover.toUri().buildUpon().scheme("https").build())
+                    .apply(
+                        RequestOptions()
+                        .placeholder(R.drawable.load_image)
+                        .diskCacheStrategy(DiskCacheStrategy.ALL)
+                        .error(R.drawable.broken_image))
                     .into(view.findViewById<ImageView>(R.id.album_image))
                 viewModelAdapterTrack!!.tracks = this.tracks
                 viewModelAdapterPerformer!!.performers = this.performers

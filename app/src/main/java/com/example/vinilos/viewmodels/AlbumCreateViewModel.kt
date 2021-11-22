@@ -5,6 +5,9 @@ import android.util.Log
 import androidx.lifecycle.*
 import com.example.vinilos.models.Album
 import com.example.vinilos.repositories.AlbumRepository
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import org.json.JSONObject
 
 class AlbumCreateViewModel (application: Application, name: String, cover: String, releaseDate:String, description: String, genre: String, recordLabel: String) :  AndroidViewModel(application) {
@@ -39,21 +42,23 @@ class AlbumCreateViewModel (application: Application, name: String, cover: Strin
     }
 
     private fun postDataFromNetwork() {
-        Log.d("act", postBody.toString())
-            albumRepository.createAlbum(
-                postBody,{
-                    _createAlbum.postValue(it)
-                    _eventNetworkError.value = false
-                    _isNetworkErrorShown.value = false
-                },{
 
-                    _eventNetworkError.value = true
+        try {
+            viewModelScope.launch (Dispatchers.Default){
+                withContext(Dispatchers.IO){
+                    var data =albumRepository.createAlbum(postBody)
+                    _createAlbum.postValue(data)
                 }
-
-
-            )
-
+                _eventNetworkError.postValue(false)
+                _isNetworkErrorShown.postValue(false)
+            }
         }
+        catch (e:Exception){
+            _eventNetworkError.value = true
+        }
+
+
+    }
     fun onNetworkErrorShown() {
         _isNetworkErrorShown.value = true
     }

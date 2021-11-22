@@ -44,16 +44,11 @@
             android:hint="Descripción" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <Spinner
             android:id="@+id/album_genre"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Genero" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="wrap_content" />
 
             <DatePicker
                 android:id="@+id/album_release"
@@ -63,16 +58,10 @@
                 android:calendarViewShown="false"/>
 
 
-        <com.google.android.material.textfield.TextInputLayout
+        <Spinner
+            android:id="@+id/album_record"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/album_record"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Record" />
-        </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="wrap_content" />
 
 
     <Button

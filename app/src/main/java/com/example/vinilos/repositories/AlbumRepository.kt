@@ -77,12 +77,17 @@ class AlbumRepository (val application: Application){
             })
         }
     }
-    fun createAlbum(body: JSONObject, callback: (JSONObject)->Unit, onError: (VolleyError)->Unit) {
-        NetworkServiceAdapter.getInstance(application).postCreateAlbum(body,{
+    suspend fun createAlbum(body: JSONObject) : JSONObject{
+        val resp = NetworkServiceAdapter.getInstance(application).postCreateAlbum(body)
+        val newAlbumsPo = NetworkServiceAdapter.getInstance(application).getAlbums()
 
-            callback(it)
-        },
-            onError
-        )
+        val format = Json {  }
+        var store = format.encodeToString(newAlbumsPo)
+        val prefs = CacheManager.SPrefsCache.getPrefs(application.baseContext, CacheManager.SPrefsCache.ALBUMS_SPREFS)
+        with(prefs.edit(),{
+            putString("0", store)
+            apply()
+        })
+        return resp
     }
 }

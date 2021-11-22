@@ -11,7 +11,20 @@
     <string name="performer_title"><b>Interpretes</b></string>
     <string name="track_title"><b>Canciones</b></string>
     <string name="comment_title"><b>Comentarios</b></string>
+    <string-array name="gnres_array">
+        <item>Classical</item>
+        <item>Folk</item>
+        <item>Rock</item>
+        <item>Salsa</item>
+    </string-array>
 
+    <string-array name="record_array">
+        <item>Sony Music</item>
+        <item>EMI</item>
+        <item>Discos Fuentes</item>
+        <item>Elektra</item>
+        <item>Fania Records</item>
+    </string-array>
 
     <string name="collector_albums_title"><b>Albums</b></string>
     <string name="collector_perfomers_title"><b>Performers</b></string>

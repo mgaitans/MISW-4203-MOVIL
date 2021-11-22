@@ -2,7 +2,7 @@
 Ingeniería de software para aplicaciones móviles
 
 ## Instalación del APK
-Las versiones de las APKs para instalación se encuentran el el folder / APKs.<br />
+Las versiones de las APKs para instalación se encuentran en el folder / APKs.<br />
 Descargue la versión 2.0.0 que es la última para instalar desde su teléfono.<br />
 Debe tener en cuenta que al momento de instalar en su telefono, este en ocasiones solicita autorización, las cuales debe confirmar.
 

@@ -21,7 +21,7 @@ Ejecutar los siguientes pasos para realizar el tess de pruebas E2E en Espresso:
 
 Hacer click derecho sobre el paquete **UI**
 Click en Run "Tests in...
-**Recomendaciones:** Si va ejecutar las pruebas en un eentorno virtual realizarlas en un emulador PIXEL 2 con API 30
+**Recomendaciones:** Si va ejecutar las pruebas en un entorno virtual realizarlas en un emulador PIXEL 2 con API 30
 
 
 

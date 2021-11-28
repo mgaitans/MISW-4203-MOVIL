@@ -1,0 +1,45 @@
+A continuación tienes una lista de elementos que puedes retocar para mejorar la accesibilidad de Vinilos. Cada elemento se corresponde con un área contorneada de la captura de pantalla adjunta.
+
+Elemento táctil
+com.example.vinilos:id/album_genre
+Este elemento tiene una altura de 24dp. ¿Por qué no la aumentas a 48dp o a un valor superior?
+
+Elemento táctil
+com.example.vinilos:id/album_record
+Este elemento tiene una altura de 24dp. ¿Por qué no la aumentas a 48dp o a un valor superior?
+
+Contraste del texto
+com.example.vinilos:id/album_name
+La relación de contraste del texto del elemento es 2,91. Esta cifra se basa en una estimación del color #828282 del primer plano y del color #E0E0E0 del segundo plano. Te recomendamos que uses colores que aumenten la relación de contraste más de 4,50 para textos de pequeño tamaño o a 3,00 para textos de gran tamaño.
+
+Contraste del texto
+com.example.vinilos:id/album_cover
+La relación de contraste del texto del elemento es 2,91. Esta cifra se basa en una estimación del color #828282 del primer plano y del color #E0E0E0 del segundo plano. Te recomendamos que uses colores que aumenten la relación de contraste más de 4,50 para textos de pequeño tamaño o a 3,00 para textos de gran tamaño.
+
+Contraste del texto
+com.example.vinilos:id/album_description
+La relación de contraste del texto del elemento es 2,91. Esta cifra se basa en una estimación del color #828282 del primer plano y del color #E0E0E0 del segundo plano. Te recomendamos que uses colores que aumenten la relación de contraste más de 4,50 para textos de pequeño tamaño o a 3,00 para textos de gran tamaño.
+
+Contraste del texto
+[47,921][215,1094]
+La relación de contraste del texto del elemento es 3,64. Esta cifra se basa en una estimación del color #868686 del primer plano y del color #FFFFFF del segundo plano. Te recomendamos que uses colores que aumenten la relación de contraste más de 4,50 para textos de pequeño tamaño o a 3,00 para textos de gran tamaño. Es posible que este elemento solo sea parcialmente visible en un contenedor desplazable.
+
+Contraste del texto
+[47,1220][215,1394]
+La relación de contraste del texto del elemento es 3,64. Esta cifra se basa en una estimación del color #868686 del primer plano y del color #FFFFFF del segundo plano. Te recomendamos que uses colores que aumenten la relación de contraste más de 4,50 para textos de pequeño tamaño o a 3,00 para textos de gran tamaño. Es posible que este elemento solo sea parcialmente visible en un contenedor desplazable.
+
+Contraste del texto
+[257,921][425,1094]
+La relación de contraste del texto del elemento es 3,64. Esta cifra se basa en una estimación del color #868686 del primer plano y del color #FFFFFF del segundo plano. Te recomendamos que uses colores que aumenten la relación de contraste más de 4,50 para textos de pequeño tamaño o a 3,00 para textos de gran tamaño. Es posible que este elemento solo sea parcialmente visible en un contenedor desplazable.
+
+Contraste del texto
+[257,1220][425,1394]
+La relación de contraste del texto del elemento es 3,64. Esta cifra se basa en una estimación del color #868686 del primer plano y del color #FFFFFF del segundo plano. Te recomendamos que uses colores que aumenten la relación de contraste más de 4,50 para textos de pequeño tamaño o a 3,00 para textos de gran tamaño. Es posible que este elemento solo sea parcialmente visible en un contenedor desplazable.
+
+Contraste del texto
+[467,921][635,1094]
+La relación de contraste del texto del elemento es 3,64. Esta cifra se basa en una estimación del color #868686 del primer plano y del color #FFFFFF del segundo plano. Te recomendamos que uses colores que aumenten la relación de contraste más de 4,50 para textos de pequeño tamaño o a 3,00 para textos de gran tamaño. Es posible que este elemento solo sea parcialmente visible en un contenedor desplazable.
+
+Contraste del texto
+[467,1220][635,1394]
+La relación de contraste del texto del elemento es 3,64. Esta cifra se basa en una estimación del color #868686 del primer plano y del color #FFFFFF del segundo plano. Te recomendamos que uses colores que aumenten la relación de contraste más de 4,50 para textos de pequeño tamaño o a 3,00 para textos de gran tamaño. Es posible que este elemento solo sea parcialmente visible en un contenedor desplazable.

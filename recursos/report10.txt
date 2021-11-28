@@ -1,0 +1,14 @@
+A continuación tienes una lista de elementos que puedes retocar para mejorar la accesibilidad de Vinilos. Cada elemento se corresponde con un área contorneada de la captura de pantalla adjunta.
+
+Contraste del texto
+com.example.vinilos:id/txt_price
+La relación de contraste del texto del elemento es 2,91. Esta cifra se basa en una estimación del color #828282 del primer plano y del color #E0E0E0 del segundo plano. Te recomendamos que uses colores que aumenten la relación de contraste más de 4,50 para textos de pequeño tamaño o a 3,00 para textos de gran tamaño.
+
+Contraste del texto
+com.example.vinilos:id/txt_status
+La relación de contraste del texto del elemento es 2,91. Esta cifra se basa en una estimación del color #828282 del primer plano y del color #E0E0E0 del segundo plano. Te recomendamos que uses colores que aumenten la relación de contraste más de 4,50 para textos de pequeño tamaño o a 3,00 para textos de gran tamaño.
+
+Descripciones de elementos
+com.example.vinilos:id/radiobutton
+El texto hablado de este elemento en el que se puede hacer clic: "Not checked" es idéntico al de otros 1 elementos.
+

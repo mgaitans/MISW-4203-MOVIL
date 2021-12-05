@@ -33,7 +33,7 @@
 
 
     <string name="collector_indications">Seleccione el álbum que desea agregar</string>
-    <string name="add_album_collector_btn">Album</string>
+    <string name="add_album_collector_btn">Asociar Album</string>
     <string name="price_album">Precio</string>
     <string name="status_album">Status</string>
 

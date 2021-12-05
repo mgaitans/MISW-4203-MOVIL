@@ -18,5 +18,10 @@
             android:icon="@drawable/ic_coleccionista"
             android:title="@string/action_coleccionista" />
 
+        <item
+            android:id="@+id/action_musician"
+            android:icon="@drawable/ic_coleccionista"
+            android:title="@string/action_musician" />
+
     </group>
 </menu>

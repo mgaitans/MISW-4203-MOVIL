@@ -3,7 +3,7 @@ package com.example.vinilos.repositories
 import android.app.Application
 import android.content.Context
 import android.net.ConnectivityManager
-import com.example.vinilos.models.Musician
+
 import com.example.vinilos.models.Performer
 import com.example.vinilos.network.CacheManager
 import com.example.vinilos.network.NetworkServiceAdapter

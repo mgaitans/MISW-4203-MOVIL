@@ -7,9 +7,9 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.vinilos.R
 import com.example.vinilos.databinding.AlbumPerformerBinding
-import com.example.vinilos.databinding.AlbumTrackBinding
+
 import com.example.vinilos.models.Performer
-import com.example.vinilos.models.Track
+
 import com.squareup.picasso.Picasso
 
 class AlbumPerformerAdapter: RecyclerView.Adapter<AlbumPerformerAdapter.AlbumPerformerViewHolder>() {

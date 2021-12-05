@@ -6,7 +6,7 @@ import androidx.annotation.LayoutRes
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.vinilos.R
-import com.example.vinilos.databinding.AlbumPerformerBinding
+
 import com.example.vinilos.databinding.CollectorPerformerBinding
 import com.example.vinilos.models.Performer
 import com.squareup.picasso.Picasso

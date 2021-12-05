@@ -1,11 +1,11 @@
 package com.example.vinilos.viewmodels
 
 import android.app.Application
-import android.util.Log
+
 import androidx.lifecycle.*
-import com.example.vinilos.models.AlbumDetail
+
 import com.example.vinilos.models.CollectorDetail
-import com.example.vinilos.repositories.AlbumDetailRepository
+
 import com.example.vinilos.repositories.CollectorRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

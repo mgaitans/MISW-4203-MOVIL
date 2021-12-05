@@ -1,11 +1,11 @@
 package com.example.vinilos.network
 
 import android.content.Context
-import android.util.Log
+
 import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.Response
-import com.android.volley.VolleyError
+
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
@@ -64,7 +64,13 @@ class NetworkServiceAdapter constructor(context: Context) {
                 }
                 for (i in 0 until performers.length()) {
                     val item = performers.getJSONObject(i)
-                    performerList.add(i, Performer(performerId = item.getInt("id"),name = item.getString("name"), image = item.getString("image"), description = item.getString("description"), birthDate = item.getString("birthDate")))
+                    var date = " "
+                    if(item.getString("creationDate")!=null){
+                        date = item.getString("creationDate")
+                    }else if(item.getString("birthDate")!=null){
+                        date = item.getString("birthDate")
+                    }
+                    performerList.add(i, Performer(performerId = item.getInt("id"),name = item.getString("name"), image = item.getString("image"), description = item.getString("description"), birthDate = date))
                 }
                 for (i in 0 until comments.length()) {
                     val item = comments.getJSONObject(i)
@@ -108,7 +114,13 @@ class NetworkServiceAdapter constructor(context: Context) {
 
                 for (i in 0 until performers.length()) {
                     val item = performers.getJSONObject(i)
-                    performerList.add(i, Performer(performerId = item.getInt("id"),name = item.getString("name"), image = item.getString("image"), description = item.getString("description"), birthDate = item.getString("birthDate")))
+                    var date = " "
+                    if(item.getString("creationDate")!=null){
+                        date = item.getString("creationDate")
+                    }else if(item.getString("birthDate")!=null){
+                        date = item.getString("birthDate")
+                    }
+                    performerList.add(i, Performer(performerId = item.getInt("id"),name = item.getString("name"), image = item.getString("image"), description = item.getString("description"), birthDate = date))
                 }
                 for (i in 0 until comments.length()) {
                     val item = comments.getJSONObject(i)

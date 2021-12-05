@@ -7,9 +7,9 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.vinilos.R
 import com.example.vinilos.databinding.AlbumCommentBinding
-import com.example.vinilos.databinding.AlbumPerformerBinding
+
 import com.example.vinilos.models.Comment
-import com.example.vinilos.models.Performer
+
 
 class AlbumCommentAdapter : RecyclerView.Adapter<AlbumCommentAdapter.AlbumCommentViewHolder>(){
 

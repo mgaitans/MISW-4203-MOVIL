@@ -25,6 +25,11 @@ class CacheManager (context: Context){
         const val COLLECTORS_SPREFS = "com.example.vinilos.collectors"
         const val ALBUM_DETAIL_SPREFS = "com.example.vinilos.albumdetail"
         const val ALBUMS_SPREFS = "com.example.vinilos.albums"
+        const val MUSICIANS_SPREFS = "com.example.vinilos.musicians"
+        const val BANDS_SPREFS = "com.example.vinilos.bands"
+        const val BAND_DETAIL_SPREFS = "com.example.vinilos.banddetail"
+        const val MUSICIAN_DETAIL_SPREFS = "com.example.vinilos.musiciandetail"
+
         fun getPrefs(context: Context, name:String): SharedPreferences{
             return context.getSharedPreferences(name,
                 Context.MODE_PRIVATE

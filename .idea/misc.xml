@@ -52,6 +52,9 @@
         <entry key="..\:/Users/pinto/Documents/MISO/4/Moviles/Vinilos/app/src/main/res/layout/fragment_album_detail.xml" value="0.2957427536231884" />
         <entry key="..\:/Users/pinto/Documents/MISO/4/Moviles/Vinilos/app/src/main/res/layout/fragment_album_list.xml" value="0.2957427536231884" />
         <entry key="..\:/Users/pinto/Documents/MISO/4/Moviles/Vinilos/app/src/main/res/menu/layout_menu.xml" value="0.36666666666666664" />
+        <entry key="app/src/main/res/layout/activity_album.xml" value="0.20199275362318841" />
+        <entry key="app/src/main/res/layout/fragment_album_create.xml" value="0.20199275362318841" />
+        <entry key="app/src/main/res/layout/fragment_album_detail.xml" value="0.22083333333333333" />
       </map>
     </option>
   </component>

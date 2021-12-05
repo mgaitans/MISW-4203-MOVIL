@@ -19,16 +19,14 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
 import com.example.vinilos.R
-import com.example.vinilos.databinding.FragmentAlbumDetailBinding
+
 import com.example.vinilos.databinding.FragmentBandDetailBinding
-import com.example.vinilos.models.AlbumDetail
+
 import com.example.vinilos.models.Band
 import com.example.vinilos.models.Musician
-import com.example.vinilos.ui.adapters.AlbumCommentAdapter
-import com.example.vinilos.ui.adapters.AlbumDetailAdapter
-import com.example.vinilos.ui.adapters.AlbumPerformerAdapter
+
 import com.example.vinilos.ui.adapters.AlbumsAdapter
-import com.example.vinilos.viewmodels.AlbumDetailViewModel
+
 import com.example.vinilos.viewmodels.BandDetailViewModel
 import com.example.vinilos.viewmodels.MusicianDetailViewModel
 

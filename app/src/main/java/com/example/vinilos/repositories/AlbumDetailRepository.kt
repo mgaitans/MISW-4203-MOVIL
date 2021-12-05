@@ -4,7 +4,7 @@ import android.app.Application
 import android.content.Context
 import android.net.ConnectivityManager
 import android.util.Log
-import com.android.volley.VolleyError
+
 import com.example.vinilos.models.*
 import com.example.vinilos.network.CacheManager
 import com.example.vinilos.network.NetworkServiceAdapter

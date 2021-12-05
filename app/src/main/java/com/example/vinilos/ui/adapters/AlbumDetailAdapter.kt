@@ -1,18 +1,16 @@
 package com.example.vinilos.ui.adapters
 
-import android.util.Log
+
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.TextView
+
 import androidx.annotation.LayoutRes
 import androidx.databinding.DataBindingUtil
-import androidx.databinding.ViewDataBinding
-import androidx.navigation.findNavController
+
 import androidx.recyclerview.widget.RecyclerView
 import com.example.vinilos.R
 import com.example.vinilos.databinding.AlbumTrackBinding
-import com.example.vinilos.databinding.FragmentAlbumDetailBinding
+
 import com.example.vinilos.models.*
 
 class AlbumDetailAdapter : RecyclerView.Adapter<AlbumDetailAdapter.AlbumDetailViewHolder>(){

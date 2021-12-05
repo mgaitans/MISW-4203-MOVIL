@@ -1,30 +1,29 @@
 package com.example.vinilos.ui
 
 import android.os.Bundle
-import android.util.Log
+
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.CheckBox
+
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.findNavController
+
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.vinilos.R
 import com.example.vinilos.databinding.FragmentCollectorAlbumBinding
 import com.example.vinilos.models.Album
-import com.example.vinilos.models.Collector
+
 import com.example.vinilos.ui.adapters.CollectorAlbumAdapter
-import com.example.vinilos.ui.adapters.CollectorsAdapter
-import com.example.vinilos.viewmodels.AlbumDetailViewModel
+
 import com.example.vinilos.viewmodels.AlbumViewModel
 import com.example.vinilos.viewmodels.CollectorAlbumViewModel
-import com.example.vinilos.viewmodels.CollectorViewModel
+
 import com.google.android.material.textfield.TextInputEditText
 
 
@@ -65,7 +64,7 @@ class CollectorAlbumFragment : Fragment() {
 
                     viewModelPost = ViewModelProvider(this, CollectorAlbumViewModel.Factory(activity.application, args.collectorId, albums,price,status)).get(
                         CollectorAlbumViewModel::class.java)
-
+                Toast.makeText(activity, "Agregado Exitosamente!", Toast.LENGTH_LONG).show()
 
 
         }

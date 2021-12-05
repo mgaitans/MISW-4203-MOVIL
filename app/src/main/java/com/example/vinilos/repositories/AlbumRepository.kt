@@ -4,9 +4,9 @@ import android.app.Application
 import android.content.Context
 import android.net.ConnectivityManager
 import android.util.Log
-import com.android.volley.VolleyError
+
 import com.example.vinilos.models.Album
-import com.example.vinilos.models.Collector
+
 import com.example.vinilos.network.CacheManager
 import com.example.vinilos.network.NetworkServiceAdapter
 
@@ -35,7 +35,6 @@ class AlbumRepository (val application: Application){
             }
         } else albums
 
-
         var potentialResp = CacheManager.getInstance(application.applicationContext).getAlbums(0)
         if(potentialResp.isEmpty()){
             Log.d("Cache decision", "get from network")
@@ -48,7 +47,7 @@ class AlbumRepository (val application: Application){
             return potentialResp
         }
 
-        //return NetworkServiceAdapter.getInstance(application).getAlbums()
+
 
     }
 

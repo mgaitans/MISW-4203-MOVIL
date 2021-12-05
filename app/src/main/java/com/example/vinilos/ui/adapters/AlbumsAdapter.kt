@@ -14,7 +14,7 @@ import com.example.vinilos.R
 import com.example.vinilos.databinding.AlbumItemBinding
 import com.example.vinilos.models.Album
 import com.example.vinilos.ui.AlbumListFragmentDirections
-import com.squareup.picasso.Picasso
+
 
 class AlbumsAdapter : RecyclerView.Adapter<AlbumsAdapter.AlbumViewHolder>(){
     var albums :List<Album> = emptyList()

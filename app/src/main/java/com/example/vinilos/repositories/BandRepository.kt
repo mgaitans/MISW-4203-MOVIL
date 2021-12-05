@@ -14,13 +14,8 @@ class BandRepository (val application: Application){
 
 
     suspend fun refreshData(): List<Performer>{
-
-
         var musicians = getMusiciansCach(0)
-
         return if(musicians.isNullOrEmpty()){
-
-
             val cm = application.baseContext.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
             if( cm.activeNetworkInfo?.type != ConnectivityManager.TYPE_WIFI && cm.activeNetworkInfo?.type != ConnectivityManager.TYPE_MOBILE){
                 emptyList()
@@ -29,11 +24,7 @@ class BandRepository (val application: Application){
                 musicians
             }
         } else musicians
-
-        //return NetworkServiceAdapter.getInstance(application).getMusicians()
-
     }
-
     suspend fun getMusiciansCach(musicianId:Int): List<Performer>{
         val format = Json {  }
         val prefs = CacheManager.SPrefsCache.getPrefs(application.baseContext, CacheManager.SPrefsCache.BANDS_SPREFS)
@@ -47,7 +38,6 @@ class BandRepository (val application: Application){
         }
         return listOf<Performer>()
     }
-
     suspend fun addMusiciansCach(musicianId:Int, comments: List<Performer>){
         val format = Json {  }
         val prefs = CacheManager.SPrefsCache.getPrefs(application.baseContext, CacheManager.SPrefsCache.BANDS_SPREFS)

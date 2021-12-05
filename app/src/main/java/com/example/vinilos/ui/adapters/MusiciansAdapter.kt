@@ -1,6 +1,6 @@
 package com.example.vinilos.ui.adapters
 
-import android.annotation.SuppressLint
+
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.annotation.LayoutRes
@@ -12,12 +12,11 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
 import com.example.vinilos.R
-import com.example.vinilos.databinding.AlbumItemBinding
+
 import com.example.vinilos.databinding.MusicianItemBinding
-import com.example.vinilos.models.Album
-import com.example.vinilos.models.Musician
+
 import com.example.vinilos.models.Performer
-import com.example.vinilos.ui.AlbumListFragmentDirections
+
 import com.example.vinilos.ui.MusicianListFragmentDirections
 
 class MusiciansAdapter : RecyclerView.Adapter<MusiciansAdapter.MusicianViewHolder>(){

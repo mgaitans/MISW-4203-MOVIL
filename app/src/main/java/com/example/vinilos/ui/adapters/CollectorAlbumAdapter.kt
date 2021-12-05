@@ -1,24 +1,23 @@
 package com.example.vinilos.ui.adapters
 
-import android.content.Context
+
 import android.view.LayoutInflater
-import android.view.View
+
 import android.view.ViewGroup
 import android.widget.CheckBox
 import androidx.annotation.LayoutRes
 import androidx.core.net.toUri
 import androidx.databinding.DataBindingUtil
-import androidx.navigation.findNavController
+
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
 import com.example.vinilos.R
-import com.example.vinilos.databinding.AlbumItemBinding
+
 import com.example.vinilos.databinding.CollectorAlbumItemBinding
 import com.example.vinilos.models.Album
-import com.example.vinilos.ui.AlbumListFragmentDirections
-import com.squareup.picasso.Picasso
+
 
 class CollectorAlbumAdapter  : RecyclerView.Adapter<CollectorAlbumAdapter.CollectorAlbumViewHolder>(){
     val checkedAlbums = ArrayList<Album>()

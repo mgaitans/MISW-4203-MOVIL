@@ -65,9 +65,9 @@ class NetworkServiceAdapter constructor(context: Context) {
                 for (i in 0 until performers.length()) {
                     val item = performers.getJSONObject(i)
                     var date = " "
-                    if(item.getString("creationDate")!=null){
+                    if(item.has("creationDate")){
                         date = item.getString("creationDate")
-                    }else if(item.getString("birthDate")!=null){
+                    }else if(item.has("birthDate")){
                         date = item.getString("birthDate")
                     }
                     performerList.add(i, Performer(performerId = item.getInt("id"),name = item.getString("name"), image = item.getString("image"), description = item.getString("description"), birthDate = date))
@@ -115,9 +115,9 @@ class NetworkServiceAdapter constructor(context: Context) {
                 for (i in 0 until performers.length()) {
                     val item = performers.getJSONObject(i)
                     var date = " "
-                    if(item.getString("creationDate")!=null){
+                    if(item.has("creationDate")){
                         date = item.getString("creationDate")
-                    }else if(item.getString("birthDate")!=null){
+                    }else if(item.has("birthDate")){
                         date = item.getString("birthDate")
                     }
                     performerList.add(i, Performer(performerId = item.getInt("id"),name = item.getString("name"), image = item.getString("image"), description = item.getString("description"), birthDate = date))

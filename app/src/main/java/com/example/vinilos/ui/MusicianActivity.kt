@@ -6,23 +6,26 @@ import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Button
+import android.widget.TextView
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.vinilos.R
-import com.example.vinilos.databinding.ActivityCollectorBinding
+import com.example.vinilos.databinding.ActivityMusicianBinding
+import com.google.android.material.textfield.TextInputEditText
 
-class CollectorActivity : AppCompatActivity() {
+class MusicianActivity : AppCompatActivity() {
     private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding = ActivityCollectorBinding.inflate(layoutInflater)
+        val binding = ActivityMusicianBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         // Get the navigation host fragment from this Activity
         val navHostFragment = supportFragmentManager
-            .findFragmentById(R.id.nav_host_fragment_collector) as NavHostFragment
+            .findFragmentById(R.id.nav_host_fragment_musician) as NavHostFragment
         // Instantiate the navController using the NavHostFragment
         navController = navHostFragment.navController
         // Make sure actions in the ActionBar get propagated to the NavController
@@ -34,7 +37,7 @@ class CollectorActivity : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.layout_menu, menu)
-        supportActionBar!!.title = "Coleccionistas"
+        supportActionBar!!.title = "Artistas"
         return true
     }
 
@@ -46,15 +49,15 @@ class CollectorActivity : AppCompatActivity() {
                 startActivity(intent)
                 return true
             }
-            R.id.action_album -> {
+            R.id.action_coleccionista -> {
                 // Create an intent with a destination of the other Activity
-                val intent = Intent(this, AlbumActivity::class.java)
+                val intent = Intent(this, CollectorActivity::class.java)
                 startActivity(intent)
                 return true
             }
-            R.id.action_musician -> {
+            R.id.action_album -> {
                 // Create an intent with a destination of the other Activity
-                val intent = Intent(this, MusicianActivity::class.java)
+                val intent = Intent(this, AlbumActivity::class.java)
                 startActivity(intent)
                 return true
             }

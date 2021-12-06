@@ -19,14 +19,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="right|top"
-            android:gravity="right"
             android:orientation="horizontal"
             tools:layout_editor_absoluteX="16dp">
 
             <FrameLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_gravity="right|top">
+                android:layout_gravity="right|top"
+                tools:ignore="RtlHardcoded">
 
             </FrameLayout>
 

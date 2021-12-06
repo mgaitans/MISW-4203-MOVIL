@@ -6,7 +6,7 @@ import androidx.annotation.LayoutRes
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.vinilos.R
-import com.example.vinilos.databinding.AlbumCommentBinding
+
 import com.example.vinilos.databinding.CollectorCommentBinding
 import com.example.vinilos.models.Comment
 

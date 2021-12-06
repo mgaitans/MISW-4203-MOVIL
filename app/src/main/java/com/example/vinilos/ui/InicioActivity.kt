@@ -15,7 +15,7 @@ class InicioActivity : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.layout_menu, menu)
-        supportActionBar!!.title = "Vinilos"
+        supportActionBar!!.title = "Inicio"
         return true
     }
 
@@ -30,6 +30,12 @@ class InicioActivity : AppCompatActivity() {
             R.id.action_coleccionista -> {
                 // Create an intent with a destination of the other Activity
                 val intent = Intent(this, CollectorActivity::class.java)
+                startActivity(intent)
+                return true
+            }
+            R.id.action_musician -> {
+                // Create an intent with a destination of the other Activity
+                val intent = Intent(this, MusicianActivity::class.java)
                 startActivity(intent)
                 return true
             }

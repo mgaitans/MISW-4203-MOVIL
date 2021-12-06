@@ -1,11 +1,11 @@
 package com.example.vinilos.network
 
 import android.content.Context
-import android.util.Log
+
 import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.Response
-import com.android.volley.VolleyError
+
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
@@ -64,7 +64,13 @@ class NetworkServiceAdapter constructor(context: Context) {
                 }
                 for (i in 0 until performers.length()) {
                     val item = performers.getJSONObject(i)
-                    performerList.add(i, Performer(performerId = item.getInt("id"),name = item.getString("name"), image = item.getString("image"), description = item.getString("description"), birthDate = item.getString("birthDate")))
+                    var date = " "
+                    if(item.has("creationDate")){
+                        date = item.getString("creationDate")
+                    }else if(item.has("birthDate")){
+                        date = item.getString("birthDate")
+                    }
+                    performerList.add(i, Performer(performerId = item.getInt("id"),name = item.getString("name"), image = item.getString("image"), description = item.getString("description"), birthDate = date))
                 }
                 for (i in 0 until comments.length()) {
                     val item = comments.getJSONObject(i)
@@ -108,7 +114,13 @@ class NetworkServiceAdapter constructor(context: Context) {
 
                 for (i in 0 until performers.length()) {
                     val item = performers.getJSONObject(i)
-                    performerList.add(i, Performer(performerId = item.getInt("id"),name = item.getString("name"), image = item.getString("image"), description = item.getString("description"), birthDate = item.getString("birthDate")))
+                    var date = " "
+                    if(item.has("creationDate")){
+                        date = item.getString("creationDate")
+                    }else if(item.has("birthDate")){
+                        date = item.getString("birthDate")
+                    }
+                    performerList.add(i, Performer(performerId = item.getInt("id"),name = item.getString("name"), image = item.getString("image"), description = item.getString("description"), birthDate = date))
                 }
                 for (i in 0 until comments.length()) {
                     val item = comments.getJSONObject(i)
@@ -169,6 +181,85 @@ class NetworkServiceAdapter constructor(context: Context) {
             }))
     }
 
+    //FUCNION PARA TRAER LOS MUSICOS DEL ENDPOINT
+    suspend fun getMusicians() = suspendCoroutine<List<Performer>>{cont->
+        requestQueue.add(getRequest("musicians",
+            Response.Listener<String> { response ->
+                val resp = JSONArray(response)
+                val list = mutableListOf<Performer>()
+                for (i in 0 until resp.length()) {
+                    val item = resp.getJSONObject(i)
+                    list.add(i, Performer(performerId = item.getInt("id"),name = item.getString("name"), image = item.getString("image"), description = item.getString("description"), birthDate = item.getString("birthDate")))
+                }
+                //Log.d("act", list.toString())
+                cont.resume(list)
+            },
+            Response.ErrorListener{
+                cont.resumeWithException(it)
+            }))
+    }
+
+
+    suspend fun getBands() = suspendCoroutine<List<Performer>>{cont->
+        requestQueue.add(getRequest("bands",
+            Response.Listener<String> { response ->
+                val resp = JSONArray(response)
+                val list = mutableListOf<Performer>()
+                for (i in 0 until resp.length()) {
+                    val item = resp.getJSONObject(i)
+                    list.add(i, Performer(performerId = item.getInt("id"),name = item.getString("name"), image = item.getString("image"), description = item.getString("description"), birthDate = item.getString("creationDate")))
+                }
+
+                cont.resume(list)
+            },
+            Response.ErrorListener{
+                cont.resumeWithException(it)
+            }))
+    }
+
+    suspend fun getBand(bandId:Int) = suspendCoroutine<Band> {cont->
+        requestQueue.add(getRequest("bands/$bandId",
+            Response.Listener<String>{ response ->
+                val resp = JSONObject(response)
+
+                val albums = resp.getJSONArray("albums")
+
+                val albumList = mutableListOf<Album>()
+
+
+                for (i in 0 until albums.length()) {
+                    val item = albums.getJSONObject(i)
+                    albumList.add(i, Album(albumId = item.getInt("id"),name = item.getString("name"), cover = item.getString("cover"), releaseDate = item.getString("releaseDate"), description = item.getString("description"), genre= item.getString("genre"), recordLabel= item.getString("recordLabel")))
+                }
+
+                val band = Band(id = resp.getInt("id"),name = resp.getString("name"), image = resp.getString("image"), description = resp.getString("description"), creationDate= resp.getString("creationDate"), albums = albumList)
+
+                cont.resume(band)
+            },
+            Response.ErrorListener{
+                cont.resumeWithException(it)
+            }))
+    }
+
+    suspend fun getMusician(musicianId:Int) = suspendCoroutine<Musician> {cont->
+        requestQueue.add(getRequest("musicians/$musicianId",
+            Response.Listener<String>{ response ->
+                val resp = JSONObject(response)
+                val albums = resp.getJSONArray("albums")
+                val albumList = mutableListOf<Album>()
+                for (i in 0 until albums.length()) {
+                    val item = albums.getJSONObject(i)
+                    albumList.add(i, Album(albumId = item.getInt("id"),name = item.getString("name"), cover = item.getString("cover"), releaseDate = item.getString("releaseDate"), description = item.getString("description"), genre= item.getString("genre"), recordLabel= item.getString("recordLabel")))
+                }
+
+                val band = Musician(id = resp.getInt("id"),name = resp.getString("name"), image = resp.getString("image"), description = resp.getString("description"), birthDate= resp.getString("birthDate"), albums = albumList)
+
+                cont.resume(band)
+            },
+            Response.ErrorListener{
+                cont.resumeWithException(it)
+            }))
+    }
 
 
     private fun getRequest(path:String, responseListener: Response.Listener<String>, errorListener: Response.ErrorListener): StringRequest {

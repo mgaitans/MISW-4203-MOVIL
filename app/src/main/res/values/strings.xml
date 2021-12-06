@@ -7,6 +7,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_albums">Albums</string>
+    <string name="title_musicians2">Músicos</string>
     <string name="title_collector">Coleccionistas</string>
     <string name="performer_title"><b>Interpretes</b></string>
     <string name="track_title"><b>Canciones</b></string>
@@ -32,7 +33,7 @@
 
 
     <string name="collector_indications">Seleccione el álbum que desea agregar</string>
-    <string name="add_album_collector_btn">Album</string>
+    <string name="add_album_collector_btn">Asociar Album</string>
     <string name="price_album">Precio</string>
     <string name="status_album">Status</string>
 
@@ -130,4 +131,7 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
+    <string name="title_musicians">Artistas</string>
+    <string name="action_musician"><b>Artistas</b></string>
+    <string name="imagen">imagen</string>
 </resources>

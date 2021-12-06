@@ -20,6 +20,9 @@
             android:name=".ui.InicioActivity"
             android:parentActivityName=".ui.MainActivity" />
         <activity
+            android:name=".ui.MusicianActivity"
+            android:parentActivityName=".ui.MainActivity" />
+        <activity
             android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>

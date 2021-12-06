@@ -34,7 +34,7 @@ class CollectorActivity : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.layout_menu, menu)
-        supportActionBar!!.title = "Vinilos"
+        supportActionBar!!.title = "Coleccionistas"
         return true
     }
 
@@ -49,6 +49,12 @@ class CollectorActivity : AppCompatActivity() {
             R.id.action_album -> {
                 // Create an intent with a destination of the other Activity
                 val intent = Intent(this, AlbumActivity::class.java)
+                startActivity(intent)
+                return true
+            }
+            R.id.action_musician -> {
+                // Create an intent with a destination of the other Activity
+                val intent = Intent(this, MusicianActivity::class.java)
                 startActivity(intent)
                 return true
             }

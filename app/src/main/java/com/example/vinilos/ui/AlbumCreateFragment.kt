@@ -1,6 +1,6 @@
 package com.example.vinilos.ui
 
-import android.app.Activity
+
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -101,6 +101,8 @@ class AlbumCreateFragment : Fragment() {
             Log.d("ItemSeleccionado", genre)
             viewModelCreate = ViewModelProvider(this, AlbumCreateViewModel.Factory(activity.application, name, cover, releaseDate, description, genre,recordLabel)).get(
                 AlbumCreateViewModel::class.java)
+
+            Toast.makeText(activity, "Creado Exitosamente!", Toast.LENGTH_LONG).show()
         }
 
 

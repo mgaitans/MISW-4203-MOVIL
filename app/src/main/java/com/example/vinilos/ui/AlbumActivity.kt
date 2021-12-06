@@ -6,14 +6,13 @@ import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Button
-import android.widget.TextView
+
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.vinilos.R
 import com.example.vinilos.databinding.ActivityAlbumBinding
-import com.google.android.material.textfield.TextInputEditText
+
 
 class AlbumActivity : AppCompatActivity() {
     private lateinit var navController: NavController
@@ -37,7 +36,7 @@ class AlbumActivity : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.layout_menu, menu)
-        supportActionBar!!.title = "Vinilos"
+        supportActionBar!!.title = "Albums"
         return true
     }
 
@@ -52,6 +51,12 @@ class AlbumActivity : AppCompatActivity() {
             R.id.action_coleccionista -> {
                 // Create an intent with a destination of the other Activity
                 val intent = Intent(this, CollectorActivity::class.java)
+                startActivity(intent)
+                return true
+            }
+            R.id.action_musician -> {
+                // Create an intent with a destination of the other Activity
+                val intent = Intent(this, MusicianActivity::class.java)
                 startActivity(intent)
                 return true
             }
